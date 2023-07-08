@@ -1,0 +1,298 @@
+.promo {
+    padding: 3.15vw 0 0;
+    overflow-x: clip;
+    position: relative;
+    &__bg {
+        position: absolute;
+        max-width: 1650px;
+        width: 100%;
+        height: 170%;
+        top: -25%;
+        right: 0;
+        z-index: -1;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 104%;
+            height: 90%;
+            right: 0;
+            top: 0;
+            background-image: url('/img/promo/back.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+
+        }
+    }
+    &__title {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 5.35em;
+        align-items: end;
+        width: 100%;
+        column-gap: 3%;
+        row-gap: 1.5vw;
+        margin-bottom: 6vw;
+        span {
+            display: block;
+            &:nth-child(3) {
+                text-transform: none;
+                font-size: 0.188em;
+                width: 20%;
+                align-self: center;
+                font-weight: 400;
+                font-family: 'Avenir';
+                text-align: end;
+                line-height: 1.2;
+            }
+        }
+    }
+    &__arrows {
+        width: 18%;
+        height: auto;
+        display: flex;
+        gap: 18%;
+        margin-bottom: .15em;
+        img {
+            display: block;
+            width: 41%;
+            height: auto;
+        }
+    }
+    &__dates {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 4.2em;
+        border-bottom: 2px solid #fff;
+    }
+    &__timer {
+        display: flex;
+        width: 23%;
+        gap: 25%;
+    }
+    &__wrap {
+        span {
+            font-weight: 750;
+            color: #FF9F18;
+            margin-bottom: 22px;
+            font-size: 2.65em;
+            display: block;
+        }
+    }
+    &__button {
+        position: relative;
+        font-size: 1.4em;
+        font-weight: 750;
+        width: 24%;
+        background-color: #FF9F18;
+        color: #fff;
+        padding: 0.75rem 3.625rem;
+        border: 1px solid #FF9F18;
+        border-radius: 200px;
+        line-height: 1.3;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        z-index: 2;
+        &:hover {
+            background-color: #C27200;
+        }
+    }
+    &__date {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        span {
+            display: block;
+            font-weight: 750;
+            font-size: 2.65em;
+            margin-bottom: 22px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media(max-width: 1800px) {
+    .promo {
+        &__bg {
+            height: 177%;
+        }
+        &__title {
+            font-size: 7vw;
+            span {
+                &:nth-child(3) {
+                    font-size: 1.3vw;
+                }
+            }
+        }
+        &__wrap {
+            span {
+                font-size: 3.3vw;
+            }
+        }
+        &__button {
+            font-size: 1.8vw;
+        }
+        &__date {
+            span {
+                font-size: 3.3vw;
+            }
+        }
+    }
+}
+@media(max-width: 1280px) {
+    .promo {
+        &__bg {
+            height: 183%;
+        }
+        &__title {
+            font-size: 6.5vw;
+            span {
+                &:nth-child(3) {
+                    font-size: 1.2vw;
+                }
+            }
+        }
+        &__timer {
+            gap: 20%;
+        }
+        &__button {
+            font-size: 1.23vw;
+        }
+    }
+}
+@media(max-width: 991px) {
+    .promo {
+        &__button {
+            width: 30%;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .promo.active {
+        filter: blur(18px);
+    }
+    .promo {
+        filter: blur(0px);
+        &__bg {
+            height: 103%;
+        }
+        position: relative;
+        &__title {
+            display: flex;
+            margin-top: 34vw;
+            row-gap: 2.5vw;
+            margin-bottom: 13vw;
+            span {
+                text-align: end;
+                width: 100%;
+                &:first-child {
+                    order: -1;
+                    text-align: start;
+                }
+                &:nth-child(2) {
+                    order: 3;
+                }
+                &:nth-child(3) {
+                    order: 4;
+                    margin-left: auto;
+                    font-size: 20px;
+                    width: 53%;
+                }
+                &:last-child {
+                    order: 1;
+                    text-align: start;
+                }
+            }
+            
+        }
+        &__timer {
+            position: absolute;
+            left: 20px;
+            top: 35px;
+
+        }
+        &__wrap {
+            font-size: 12px;
+            span {
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
+        }
+        &__arrows {
+            position: absolute;
+            width: 22%;
+            top: 35px;
+            right: 20px;
+            img {
+                width: 100%;
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
+        &__dates {
+            flex-direction: column;
+            border-bottom: 1px solid #fff;
+        }
+        &__date {
+            order: 1;
+            font-size: 20px;
+            align-items: center;
+            margin-bottom: 40px;
+            span {
+                font-size: 24px;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+        &__button {
+            order: 2;
+            width: 70%;
+            font-size: 20px;
+        }
+    }
+}
+@media(max-width: 576px) {
+    .promo {
+        &__bg {
+            top: -25%;
+            height: 240vw;
+            &::after {
+                width: 100%;
+                height: 87%;
+                background-image: url(/img/promo/back-min.png);
+            }
+        }
+        &__title {
+            margin-top: 40vw;
+            row-gap: 2vw;
+            margin-bottom: 60px;
+            span {
+                &:nth-child(3) {
+                    font-size: 12px;
+                    width: 62%;
+                }
+            }
+        }
+        &__dates {
+            padding-bottom: 60px;
+        }
+        &__date {
+            font-size: 12px;
+        }
+        &__arrows {
+            width: 31%;
+        }
+        &__wrap {
+            font-size: 9px;
+        }
+        &__button {
+            font-size: 14px;
+            width: 100%;
+            padding: 0.75rem 1.625rem;
+        }
+    }
+}
