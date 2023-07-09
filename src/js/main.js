@@ -1,5 +1,7 @@
 "use strict";
 
+import mobileMenu from "./modules/mobile-menu";
+
 
 window.addEventListener("load", () => {
   gsap.registerPlugin(ScrollToPlugin);
@@ -31,7 +33,7 @@ SmoothScroll({
     // Поддержка тачпада
     touchpadSupport: true,
   });
-
+  mobileMenu();
   
  
     // let form = document.getElementById("form"),
