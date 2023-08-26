@@ -1,7 +1,7 @@
 "use strict";
 
 import mobileMenu from "./modules/mobile-menu";
-
+import localtime from "./modules/local-time";
 
 window.addEventListener("load", () => {
   gsap.registerPlugin(ScrollToPlugin);
@@ -34,7 +34,9 @@ SmoothScroll({
     touchpadSupport: true,
   });
   mobileMenu();
-  
+  setInterval(() => {
+    localtime();
+  }, 1000)
  
     // let form = document.getElementById("form"),
     //     serverResponse = document.querySelector('.feedback__ok');

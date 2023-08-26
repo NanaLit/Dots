@@ -50,8 +50,11 @@
         margin-bottom: 15vw;
         width: 100%;
     }
-    &__breef {
-        .akcent {
+    &__item {
+        cursor: default;
+        line-height: 1.4;
+        transition: all .5s ease-in-out;
+        &:hover {
             color: #9D9D9D;
             position: relative;
             margin-left: 15px;
@@ -70,6 +73,7 @@
     }
     &__descr {
         width: 18%;
+        line-height: 1.4;
     }
 }
 
